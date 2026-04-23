@@ -1,0 +1,62 @@
+{
+  "name": "GameScore",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the game was played"
+    },
+    "game": {
+      "type": "string",
+      "enum": [
+        "thought_dump",
+        "zen_tracing"
+      ],
+      "description": "Which game was played"
+    },
+    "score": {
+      "type": "number",
+      "description": "Overall score (0-100)"
+    },
+    "precision": {
+      "type": "number",
+      "description": "Precision score for zen tracing (0-100)"
+    },
+    "stability": {
+      "type": "number",
+      "description": "Stability/smoothness score for zen tracing (0-100)"
+    },
+    "time_seconds": {
+      "type": "number",
+      "description": "Time taken in seconds"
+    },
+    "brain_fog_score": {
+      "type": "number",
+      "description": "Brain fog score 0-10 (higher = more fog)"
+    },
+    "fog_label": {
+      "type": "string",
+      "description": "Human-readable brain fog label"
+    },
+    "thoughts_count": {
+      "type": "number",
+      "description": "Number of thoughts dissolved in thought dump"
+    },
+    "emotion_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Emotion tags from thought dump"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes"
+    }
+  },
+  "required": [
+    "date",
+    "game"
+  ]
+}

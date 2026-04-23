@@ -1,0 +1,121 @@
+{
+  "name": "WellnessEntry",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the wellness entry"
+    },
+    "meals": {
+      "type": "array",
+      "description": "List of meals with per-meal mood and social quality",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          },
+          "skipped": {
+            "type": "boolean"
+          },
+          "foodName": {
+            "type": "string"
+          },
+          "foodType": {
+            "type": "string"
+          },
+          "mood": {
+            "type": "string"
+          },
+          "social": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sleep_hours": {
+      "type": "number",
+      "description": "Hours slept last night"
+    },
+    "physical_activity_minutes": {
+      "type": "number",
+      "description": "Minutes spent on physical activity"
+    },
+    "social_interaction_quality": {
+      "type": "string",
+      "enum": [
+        "excellent",
+        "good",
+        "neutral",
+        "poor",
+        "none"
+      ],
+      "description": "Overall social interaction quality for the day (derived from per-meal entries)"
+    },
+    "meditates": {
+      "type": "boolean"
+    },
+    "meditation_minutes": {
+      "type": "number"
+    },
+    "on_medication": {
+      "type": "boolean"
+    },
+    "medication_side_effects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Selected medication side effects"
+    },
+    "has_hobbies": {
+      "type": "boolean"
+    },
+    "selected_hobbies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Hobbies the user engaged with today"
+    },
+    "hobby_minutes": {
+      "type": "number"
+    },
+    "work_field": {
+      "type": "string",
+      "enum": [
+        "tech_software",
+        "creative_design",
+        "healthcare",
+        "education",
+        "finance",
+        "manual_physical",
+        "remote_office",
+        "student",
+        "other"
+      ],
+      "description": "User's work field for screen time context"
+    },
+    "screen_time_minutes": {
+      "type": "number",
+      "description": "Minutes of screen time today"
+    },
+    "moods": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "mood_analysis": {
+      "type": "object",
+      "description": "AI-generated mood analysis"
+    }
+  },
+  "required": [
+    "date"
+  ]
+}

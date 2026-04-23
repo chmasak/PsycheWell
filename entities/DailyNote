@@ -1,0 +1,23 @@
+{
+  "name": "DailyNote",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the note"
+    },
+    "title": {
+      "type": "string",
+      "description": "Optional title for the diary entry"
+    },
+    "body": {
+      "type": "string",
+      "description": "The full text of the diary entry"
+    }
+  },
+  "required": [
+    "date",
+    "body"
+  ]
+}

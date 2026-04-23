@@ -1,0 +1,20 @@
+{
+  "name": "DailyQuote",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "date",
+    "quote"
+  ]
+}
